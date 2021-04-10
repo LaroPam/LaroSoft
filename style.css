@@ -1,0 +1,917 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+}
+header {
+    width: 100%;
+    background: #000;
+    display: flex;
+}
+
+header {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+}
+
+/* Скроллбар start */
+
+::-webkit-scrollbar-button {
+    background-image: url("");
+    background-repeat: no-repeat;
+    width: 6px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #000000;
+    box-shadow: 0px 0px 3px #000 inset;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffae39;
+    background-image: url("https://yraaa.ru/_pu/24/59610063.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+::-webkit-resizer {
+    background-image: url("");
+    background-repeat: no-repeat;
+    width: 7px;
+    height: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Скроллбар end */
+
+.arrow {
+    position: fixed;
+    top: 88vh;
+    left: 60px;
+    display: none;
+}
+
+.arrow img {
+    background: #fcac45;
+    border-radius: 90%;
+    max-width: 70px;
+    border: 3px solid #ffffff;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    display: block;
+    animation: showArrow 1s linear forwards;
+}
+
+@keyframes showArrow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.arrow img:hover {
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.9) 50%,
+        transparent 50%
+    );
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 10px 100px, 10px 5px, 10px 10px, 10px 10px;
+    border: 3px solid #fcac45;
+    animation: circle-animation 600ms infinite linear;
+}
+
+@keyframes circle-animation {
+    0% {
+        background-position: 0 0, 10px 100%, 0 10px, 100% 0;
+    }
+    100% {
+        background-position: 10px 0, 0 100%, 0 0, 100% 10px;
+    }
+}
+
+.header__logo {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 800;
+    font-size: 24px;
+    margin-top: 56px;
+    margin-left: 12%;
+    padding-bottom: 10px;
+    position: relative;
+    bottom: 6px;
+}
+
+.header__logo a {
+    color: #fff;
+}
+
+nav {
+    margin-top: 56px;
+    margin-left: 29%;
+}
+
+.topnav a {
+    color: #fff;
+    text-align: center;
+    padding: 12px 16px;
+    font-style: 14px;
+    font-weight: bold;
+}
+
+.topnav a:last-child {
+    border: none;
+}
+
+.topnav a:hover {
+    border-bottom: 3px solid #fcac45;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 80px;
+}
+
+main .main__welcome {
+    background: #000;
+    text-align: center;
+    padding: 200px 0 260px 0;
+}
+
+main .main__welcome p {
+    color: #999999;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+main .main__welcome h1 {
+    color: #999999;
+    font-size: 44px;
+    font-weight: 300;
+}
+
+main .main__welcome__bold {
+    font-weight: bold;
+}
+
+.main__welcome p span {
+    font-weight: bold;
+    color: rgb(175, 174, 174);
+}
+
+.mycompany {
+    color: #fcac45;
+    font-weight: bold;
+}
+
+.wrapper {
+    width: 76%;
+    margin: 0 auto;
+}
+
+main .main__about {
+    display: flex;
+    padding: 100px 0 100px 0;
+}
+
+.about__right {
+    margin-left: 175px;
+}
+
+.right__text__bold {
+    font-weight: bold;
+}
+
+.right__text__italic {
+    font-style: italic;
+}
+
+.about__right h3 {
+    display: inline-block;
+    border-bottom: 3px solid #fcac45;
+    padding-bottom: 20px;
+    font-weight: normal;
+    font-size: 34px;
+}
+
+.about__right p {
+    margin: 30px 0 50px 0;
+    color: #6c6c6c;
+    max-width: 400px;
+}
+
+.about__right li {
+    background: url(img/mark.png) 0px no-repeat;
+    padding-left: 25px;
+    margin-top: 10px;
+    color: #6c6c6c;
+}
+
+.about__right h3 span {
+    font-weight: bold;
+}
+
+.mw-100-1 {
+    min-width: 100%;
+}
+
+.mw-100-2 {
+    min-width: 100%;
+    display: none;
+}
+
+.main__team {
+    background: #000;
+    text-align: center;
+    padding: 100px 0 165px 0;
+    color: #fff;
+}
+
+.main__team h2 {
+    font-size: 44px;
+    font-weight: normal;
+}
+
+h1::after,
+h2::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    padding-top: 20px;
+    border-bottom: 3px solid #fcac45;
+}
+
+h2 {
+    margin-bottom: 105px;
+}
+
+.main__team h2 {
+    margin-bottom: 105px;
+}
+
+.main__welcome h1::after {
+    display: none;
+}
+
+.photo {
+    background: #d7d7d7;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+.team__cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    margin: 0 40px;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.position {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.about__position {
+    font-size: 14px;
+    margin-top: 40px;
+    max-width: 250px;
+}
+
+.main__services {
+    padding: 100px 0 100px 0;
+    text-align: center;
+}
+
+.main__services h2 {
+    font-size: 44px;
+    font-weight: normal;
+}
+
+.main__services h4 {
+    font-size: 25px;
+    color: #000000;
+    margin: 29px 0 21px 0;
+}
+
+.services__text {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    color: #6c6c6c;
+    margin-bottom: 106px;
+}
+
+.card__text {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.services__line {
+    margin-bottom: 56px;
+}
+
+.services__cards {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 20px;
+}
+
+.main__companies {
+    background: #000;
+    padding: 100px 0 210px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.main__companies h2 {
+    font-size: 44px;
+    font-weight: 300;
+}
+
+.main__companies span {
+    font-weight: 500;
+}
+
+.company__logos img {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.main__testimonials {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0 122px 0;
+}
+
+.main__testimonials h2 {
+    font-size: 44px;
+    font-weight: 300;
+}
+
+.main__testimonials h2 span {
+    font-weight: 500;
+}
+
+.main__testimonials p {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.testimonials__author,
+.testimonials__company {
+    text-transform: capitalize;
+}
+
+.testimonials__author {
+    color: #bdbdbd;
+}
+
+.testimonials__company {
+    color: #929292;
+}
+
+.main__testimonials .line {
+    margin-bottom: 118px;
+}
+
+.main__work {
+    text-align: center;
+    padding: 100px 0 100px 0;
+}
+
+.main__work h2 {
+    font-size: 44px;
+    font-weight: 300;
+}
+
+.main_work .line {
+    margin-bottom: 55px;
+}
+
+.main__work h2 span {
+    font-weight: 500;
+}
+.main__work p {
+    color: #6c6c6c;
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 180px;
+}
+
+.main__work img:hover {
+    opacity: 0.9;
+}
+
+.contact__form .wrapper {
+    text-align: center;
+}
+
+.contact__form h2 {
+    font-size: 44px;
+    font-weight: 500;
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+.contact__form p {
+    font-size: 16px;
+    font-style: italic;
+    color: #6c6c6c;
+    width: 65%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.contact__wrapper {
+    width: 39.5%;
+    margin: 0 auto;
+    color: #636363;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+input,
+textarea {
+    border: 1px solid #999999;
+}
+
+input {
+    width: 19.5vw;
+    height: 40px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+input:first-of-type {
+    margin-right: 1.5vw;
+}
+
+input:focus,
+textarea:focus {
+    border: 1px solid white;
+    outline: 2px solid #fcac45;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 0 0 0 10px;
+}
+
+textarea {
+    width: 106.5%;
+    height: 162px;
+}
+
+textarea[type="text"] {
+    padding: 10px 0 0 17px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.form__inputs {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.form__inputs div {
+    display: flex;
+    flex-direction: column;
+}
+
+.button__block {
+    margin-bottom: 100px;
+    text-align: right;
+}
+
+.button__block input {
+    width: 165px;
+    height: 40px;
+    margin-top: 30px;
+    background: #fcac45;
+    color: white;
+    border: none;
+    margin-right: 0;
+}
+
+footer {
+    text-align: center;
+    height: 90px;
+    background: #222222;
+}
+
+footer a {
+    display: inline-block;
+    margin: 30px 0 0 0;
+    padding-right: 15px;
+}
+
+footer a:hover {
+    opacity: 0.6;
+}
+
+footer a:last-child {
+    padding: 0;
+}
+
+@media screen and (max-width: 1560px) {
+    nav {
+        margin-left: 20%;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    nav {
+        margin-left: 12%;
+    }
+
+    .line1 img:last-child {
+        display: none;
+    }
+    .line2 img:last-child {
+        display: none;
+    }
+    .line3 img:last-child {
+        display: none;
+    }
+
+    .about__right h3 {
+        font-size: 30px;
+    }
+
+    main .main__welcome {
+        padding-bottom: 200px;
+    }
+
+    main .main__work p {
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    nav {
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 1172px) {
+    body {
+        margin-top: -80px;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .topnav a {
+        display: none;
+        border-left: 3px solid#fcac45;
+    }
+
+    .topnav a.icon {
+        float: right;
+        margin-top: -17px;
+        display: block;
+        color: #fff;
+        font-size: 25px;
+    }
+
+    .topnav a:hover {
+        border-bottom: 2px solid #fcac45;
+        width: 20%;
+    }
+
+    a.icon:hover {
+        border-bottom: 2px solid #fcac45;
+        width: 23px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .topnav.responsive {
+        position: relative;
+        top: 50px;
+        left: -200px;
+    }
+
+    header {
+        background: rgba(0, 0, 0, 85%);
+    }
+
+    header .topnav.responsive {
+        height: 400px;
+    }
+
+    .topnav.responsive a.icon {
+        position: absolute;
+        top: -50px;
+        right: -190px;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    main .main__welcome {
+        padding: 130px 0 50px 0;
+    }
+
+    main .main__welcome p {
+        font-size: 14px;
+    }
+
+    main .main__welcome h1 {
+        font-size: 25px;
+    }
+
+    .mw-100-1 {
+        display: none;
+    }
+
+    .mw-100-2 {
+        display: block;
+        width: 40vw;
+        min-width: 30vw;
+    }
+
+    .about__left {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .main__about {
+        flex-direction: column;
+    }
+
+    .about__right {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .about__right h3 {
+        padding-top: 20px;
+    }
+
+    .about__right li {
+        text-align: left;
+    }
+
+    .about__right h3 {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    .team__cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services__cards {
+        grid-template-columns: auto;
+    }
+
+    .card__text {
+        margin-bottom: 40px;
+    }
+
+    .main__services {
+        padding: 50px 0 50px 0;
+    }
+
+    .services__text {
+        margin-bottom: 50px;
+    }
+
+    .company__logos img {
+        margin-bottom: 20px;
+    }
+
+    .main__work p {
+        margin-bottom: 90px;
+    }
+
+    main .main__about {
+        padding: 30px 0;
+    }
+
+    .main__team {
+        padding: 30px 0;
+    }
+
+    .main__team h2 {
+        margin-bottom: 30px;
+    }
+
+    .card {
+        margin-bottom: 45px;
+    }
+
+    .card .about__position {
+        margin-top: 12px;
+    }
+
+    .main__services {
+        padding: 30px 0;
+    }
+
+    .main__services h2 {
+        margin-bottom: 30px;
+    }
+
+    .main__services .services__card {
+        margin-bottom: 35px;
+    }
+
+    .main__services .services__card:last-child {
+        margin-bottom: 0;
+    }
+
+    .main__companies {
+        padding: 30px 0;
+    }
+
+    .main__companies h2 {
+        margin-bottom: 45px;
+    }
+
+    .main__work {
+        padding: 30px 0;
+    }
+
+    .main__work h2 {
+        margin-bottom: 30px;
+    }
+
+    .main__work .wrapper p {
+        margin-bottom: 30px;
+    }
+
+    .main__testimonials {
+        padding: 30px 0 0 0;
+    }
+
+    .contact__form h2 {
+        margin: 30px 0;
+    }
+
+    .contact__form p {
+        margin: 30px auto 45px auto;
+    }
+
+    .button__block {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 1066px) {
+    .line1 img:nth-child(2) {
+        display: none;
+    }
+    .line2 img:nth-child(2) {
+        display: none;
+    }
+    .line3 img:nth-child(2) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .form__inputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .form__inputs div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact__form textarea {
+        width: 50vw;
+    }
+
+    .button__block {
+        justify-content: flex-start;
+        margin-left: 8%;
+        width: 100%;
+    }
+
+    input {
+        width: 50vw;
+    }
+
+    .contact__wrapper {
+        margin-left: 25%;
+    }
+
+    .textarea__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .line1 img:not(:first-child) {
+        display: none;
+    }
+
+    .line2 img:not(:first-child) {
+        display: none;
+    }
+
+    .line3 img:not(:first-child) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .main__welcome h1 {
+        margin-bottom: 10px;
+    }
+
+    .main__welcome p {
+        display: block;
+        padding: 0 10px;
+    }
+
+    .main__team h2 {
+        font-size: 35px;
+    }
+
+    .main__services h2 {
+        font-size: 35px;
+    }
+
+    .main__companies h2 {
+        font-size: 35px;
+    }
+
+    .company__logos img {
+        display: grid;
+        grid-template-columns: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main__work h2 {
+        font-size: 35px;
+    }
+
+    .main__testimonials h2 {
+        font-size: 35px;
+        margin-bottom: 40px;
+    }
+
+    .contact__form h2 {
+        font-size: 35px;
+    }
+
+    .contact__form .wrapper {
+        width: 100%;
+    }
+}
