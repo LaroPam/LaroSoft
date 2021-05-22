@@ -1,2 +1,3 @@
 # LaroSoft
-Mock first web-development project
+
+#[View Page](https://laropam.github.io/LaroSoft/)
