@@ -18,12 +18,11 @@ header {
     width: 100%;
     background: #000;
     display: flex;
-}
-
-header {
     position: fixed;
     z-index: 99;
     top: 0;
+    transition: 0.3s;
+    background: rgba(0, 0, 0, 85%);
 }
 
 /* Скроллбар start */
@@ -101,16 +100,6 @@ header {
     background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
     background-size: 10px 100px, 10px 5px, 10px 10px, 10px 10px;
     border: 3px solid #fcac45;
-    animation: circle-animation 600ms infinite linear;
-}
-
-@keyframes circle-animation {
-    0% {
-        background-position: 0 0, 10px 100%, 0 10px, 100% 0;
-    }
-    100% {
-        background-position: 10px 0, 0 100%, 0 0, 100% 10px;
-    }
 }
 
 .header__logo {
@@ -637,14 +626,10 @@ footer a:last-child {
     }
 
     .topnav.responsive {
+        transition: 0.3s;
         position: relative;
         top: 50px;
         left: -200px;
-    }
-
-    header {
-        transition: 0.3s;
-        background: rgba(0, 0, 0, 85%);
     }
 
     header .topnav.responsive {
