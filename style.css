@@ -135,6 +135,7 @@ nav {
 }
 
 .topnav a {
+    transition: 0.3s;
     color: #fff;
     text-align: center;
     padding: 12px 16px;
@@ -642,10 +643,12 @@ footer a:last-child {
     }
 
     header {
+        transition: 0.3s;
         background: rgba(0, 0, 0, 85%);
     }
 
     header .topnav.responsive {
+        transition: 0.3s;
         height: 400px;
     }
 
